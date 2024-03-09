@@ -1,11 +1,11 @@
 pipeline {
-    agent any
+    agent any  // Execute the pipeline on any available agent
 
     stages {
-        stage('Build') {
+        stage('Build Information') {
             steps {
-                echo 'Build_Number'
-                sh 'ls'
+                echo "Build Number: ${BUILD_NUMBER}"  // Print build number
+                sh 'ls -l'                          // List directory contents with long format
             }
         }
     }
